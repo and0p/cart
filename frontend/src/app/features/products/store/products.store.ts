@@ -17,7 +17,8 @@ const initialState: ProductState = {
     filter: '',
 };
 
-export const BookSearchStore = signalStore(
+export const ProductStore = signalStore(
+    { providedIn: 'root' },
     withState(initialState),
     withComputed(({ products, filter }) => ({
         filteredProducts: computed(() =>

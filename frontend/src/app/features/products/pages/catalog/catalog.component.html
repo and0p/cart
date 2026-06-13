@@ -1,0 +1,9 @@
+<div>
+    Hello, catalog!
+
+    @for (product of productStore.products(); track product.id) {
+        <li>{{ product.title }}</li>
+    } @empty {
+        <li>There are no products.</li>
+    }
+</div>
