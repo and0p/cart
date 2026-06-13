@@ -1,3 +1,18 @@
-<div>
-    <span>{{this.product()?.title}}</span>
-</div>
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>{{ product()?.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-lg-image [src]="product()?.thumbnail">
+    <mat-card-content>
+        <p>
+            {{ product()?.description }}
+        </p>
+    </mat-card-content>
+    <mat-card-footer>
+        <button matIconButton (click)="decrementAmount()">-</button>
+            {{ amount() }}
+        <button matIconButton (click)="incrementAmount()">+</button>
+
+        <button matButton>BUY</button>
+    </mat-card-footer>
+</mat-card>

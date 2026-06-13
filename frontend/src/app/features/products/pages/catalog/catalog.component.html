@@ -1,9 +1,9 @@
-<div>
-    Hello, catalog!
-
+<mat-grid-list cols="4" gutterSize=16 rowHeight="400px">
     @for (product of productStore.products(); track product.id) {
-        <li>{{ product.title }}</li>
+        <mat-grid-tile>
+            <product [product]="product" />
+        </mat-grid-tile>
     } @empty {
-        <li>There are no products.</li>
+        There are no products.
     }
-</div>
+</mat-grid-list>
